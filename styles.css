@@ -1,0 +1,223 @@
+
+:root {
+    --color-principal: #ff6600;
+    --color-fondo: #070707;
+    --color-texto: #ffffff;
+    --color-secundario: #1c1c1c;
+    --color-gris: #cccccc;
+    --fuente: 'Poppins', Arial, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--fuente);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+  }
+  
+ 
+  header {
+    background: var(--color-secundario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  header h1 {
+    color: var(--color-principal);
+    font-size: 1.8em;
+    letter-spacing: 1px;
+  }
+  
+  nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--color-principal);
+  }
+  
+  /* ======= HERO / INICIO ======= */
+  .hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(15, 15, 15, 0.9)),
+                url('img/fondo-moto.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 120px 20px;
+    color: var(--color-texto);
+  }
+  
+  .hero h2 {
+    font-size: 2.4em;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.1em;
+    color: var(--color-gris);
+  }
+  
+  /* ======= SECCIÓN MODELOS ======= */
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  h3 {
+    color: var(--color-principal);
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  
+  .moto {
+    background: var(--color-secundario);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .moto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+  }
+  
+  .moto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .moto h4 {
+    color: var(--color-principal);
+    margin: 15px 0 5px;
+  }
+  
+  .moto p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    color: var(--color-gris);
+  }
+  
+  /* ======= SECCIÓN ACCESORIOS ======= */
+  #accesorios ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  #accesorios li {
+    background: var(--color-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 20px;
+    color: var(--color-texto);
+    transition: background 0.3s;
+  }
+  
+  #accesorios li:hover {
+    background: var(--color-principal);
+  }
+  
+  /* ======= FORMULARIO DE CONTACTO ======= */
+  #contacto form {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--color-secundario);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  #contacto input,
+  #contacto textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-texto);
+    font-size: 1em;
+  }
+  
+  #contacto textarea {
+    resize: none;
+  }
+  
+  #contacto button {
+    background: var(--color-principal);
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #contacto button:hover {
+    background: #e25500;
+  }
+  
+  /* ======= PIE DE PÁGINA ======= */
+  footer {
+    background: var(--color-secundario);
+    text-align: center;
+    padding: 20px;
+    color: var(--color-gris);
+    font-size: 0.9em;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ======= RESPONSIVE ======= */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav a {
+      display: inline-block;
+      margin: 8px;
+    }
+  
+    .galeria {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero h2 {
+      font-size: 1.8em;
+    }
+  }
+  
